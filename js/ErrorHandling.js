@@ -1,5 +1,5 @@
 function pow(base, exponent) {
-  if (typeof base !== "number" || typeof exponent !== "number") {
+  if (!Number.isInteger(base) || !Number.isInteger(exponent)) {
     throw new TypeError("Base and exponent values must be number values");
   }
   if (exponent < 0) {
