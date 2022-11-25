@@ -29,7 +29,11 @@ class Phone {
   }
 }
 
-const telephone1 = new Phone("Nokia", "3310", "black", 2000, 2010);
-console.log(telephone1.getAge());
-telephone1.year = 2000;
-console.log(telephone1.getAge());
+try {
+  const telephone1 = new Phone("Nokia", "3310", "black", 2000, 2010);
+  console.log("telephone1.getAge(): ", telephone1.getAge());
+  telephone1.year = 2000;
+  console.log("telephone1.year: ", telephone1.year);
+} catch (err) {
+  console.log("err: ", err);
+}
